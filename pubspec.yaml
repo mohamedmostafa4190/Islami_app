@@ -66,6 +66,7 @@ flutter:
     - assets/svg/
     - assets/images/
     - assets/images/onboarding/
+    - assets/images/splash2/
     - assets/Suras/
     - assets/Hadeeth/
 

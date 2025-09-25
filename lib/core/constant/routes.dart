@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/main_layer/main_layer.dart';
-import 'package:islami_app/presentation/screens/on_boarding_screen.dart';
+import 'package:islami_app/presentation/screens/onboarding/on_boarding_screen.dart';
 import 'package:islami_app/tabs/quran_tap/sura_details.dart';
 
+import '../../presentation/screens/splash_screen/splash_screen.dart';
 import '../../tabs/hadeth_tab/hadeth.dart';
 import '../../tabs/quran_tap/quran.dart';
 import '../../tabs/radio_tab/radio.dart';
@@ -18,4 +19,5 @@ Map<String, WidgetBuilder> routes = {
   SabhaTab.routeName: (context) => SabhaTab(),
   TimeTab.routeName: (context) => TimeTab(),
   SuraDetails.routeName: (context) => SuraDetails(),
+  SplashScreen.routeName: (context) => SplashScreen(),
 };

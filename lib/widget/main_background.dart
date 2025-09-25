@@ -4,7 +4,6 @@ class MainBackground extends StatelessWidget {
   MainBackground({super.key, this.backGroundImage});
 
   String? backGroundImage;
-
   @override
   Widget build(BuildContext context) {
     return Stack(

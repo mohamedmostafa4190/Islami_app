@@ -11,6 +11,7 @@ class SvgPath {
 
 class PngPath {
   static const String backGroundMosque = 'assets/images/background_mosque.png';
+  static const String brandingLogo = 'assets/images/branding_logo.png';
   static const String imageHeader = 'assets/images/img_header.png';
   static const String imageCard = 'assets/images/img_most_recent.png';
   static const String imageLhsCorner = 'assets/images/img_left_corner.png';

@@ -1,8 +1,9 @@
 flutter_native_splash:
-  background_image: "assets/images/background1.png"
+  background_image: "assets/images/islami_logo.png"
   branding: assets/images/branding_logo.png
   branding_mode: bottom
   android_12:
-    image: assets/images/background1.png
+    color: "#1E1E1E"
+    image: assets/images/islami_logo.png
     branding: assets/images/branding_logo.png
 

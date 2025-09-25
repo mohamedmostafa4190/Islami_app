@@ -22,7 +22,6 @@ class QuranTab extends StatefulWidget {
 class _QuranTabState extends State<QuranTab> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController searchController = TextEditingController();
     return SafeArea(
       child: Stack(
         alignment: AlignmentDirectional.topCenter,
@@ -38,10 +37,8 @@ class _QuranTabState extends State<QuranTab> {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       sliver: SliverToBoxAdapter(
                         child: CustomSearch(
-                          controller: searchController,
                           onChange: (value) {
                             _filterSura(value);
-                            print(value);
                           },
                         ),
                       ),

@@ -1,0 +1,8 @@
+flutter_native_splash:
+  background_image: "assets/images/background1.png"
+  branding: assets/images/branding_logo.png
+  branding_mode: bottom
+  android_12:
+    image: assets/images/background1.png
+    branding: assets/images/branding_logo.png
+

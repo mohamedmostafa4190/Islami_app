@@ -6,14 +6,14 @@ import '../../../core/constant/app_style.dart';
 import '../../../core/constant/images_path.dart';
 
 class CustomSearch extends StatelessWidget {
-  CustomSearch({super.key, required this.controller, required this.onChange});
+  CustomSearch({super.key, required this.onChange});
 
-  TextEditingController controller = TextEditingController();
   void Function(String) onChange;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: controller,
+      onTapUpOutside: (_) => FocusManager.instance.primaryFocus?.unfocus(),
       onChanged: (value) => onChange(value),
       cursorColor: AppColor.goldColor,
       style: TextStyle(color: Colors.white),

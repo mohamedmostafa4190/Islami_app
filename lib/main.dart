@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/constant/app_const.dart';
-import 'package:islami_app/presentation/screens/on_boarding_screen.dart';
+import 'package:islami_app/presentation/screens/onboarding/on_boarding_screen.dart';
+import 'package:islami_app/presentation/screens/splash_screen/splash_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/constant/routes.dart';
-import 'main_layer/main_layer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +24,7 @@ class IslamiApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Islami App',
       initialRoute: onboardingDone
-          ? MainLayer.routeName
+          ? SplashScreen.routeName
           : OnBoardingScreen.routeName,
       routes: routes,
     );

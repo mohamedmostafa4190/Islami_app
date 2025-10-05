@@ -4,9 +4,11 @@ import 'package:islami_app/tabs/quran_tap/suras_list.dart';
 import 'package:islami_app/tabs/quran_tap/view/sura_list_view.dart';
 import 'package:islami_app/tabs/quran_tap/widget/custom_most_recently_card.dart';
 import 'package:islami_app/tabs/quran_tap/widget/custom_search.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/constant/app_style.dart';
 import '../../../core/constant/images_path.dart';
+import '../../core/constant/app_const.dart';
 import '../../widget/main_background.dart';
 import '../../widget/main_header_islami.dart';
 
@@ -55,7 +57,11 @@ class _QuranTabState extends State<QuranTab> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          const MostRecentlyCard(),
+                          MostRecentlyCard(
+                            onSuraUpdated: () {
+                              setState(() {});
+                            },
+                          ),
                         ],
                       ),
                     ),
@@ -72,11 +78,15 @@ class _QuranTabState extends State<QuranTab> {
                       delegate: SliverChildBuilderDelegate(
                         (context, index) => SuraItem(
                           index: filterList[index],
-                          onTap: () {
-                            Navigator.of(context).pushNamed(
+                          onTap: () async {
+                            await MostRecentlyCard.saveMostRecentlySura(
+                              filterList[index],
+                            );
+                            await Navigator.of(context).pushNamed(
                               SuraDetails.routeName,
                               arguments: filterList[index],
                             );
+                            setState(() {});
                           },
                         ),
                         childCount: filterList.length,
@@ -90,6 +100,19 @@ class _QuranTabState extends State<QuranTab> {
         ],
       ),
     );
+  }
+
+  Future<void> mostRecently({required int value}) async {
+    final pref = await SharedPreferences.getInstance();
+    List<String> recentList = pref.getStringList(AppConst.mostRecently) ?? [];
+    if (!recentList.contains(value.toString())) {
+      recentList.insert(0, value.toString());
+    }
+    if (recentList.length > 5) {
+      recentList = recentList.sublist(0, 5);
+    }
+    await pref.setStringList(AppConst.mostRecently, recentList);
+    setState(() {});
   }
 
   List<int> filterList = List.generate(114, (index) => index);

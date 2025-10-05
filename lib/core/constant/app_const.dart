@@ -12,4 +12,5 @@ class AppSize {
 
 class AppConst {
   static final String onBoarding = 'Onboarding';
+  static final String mostRecently = 'MostRecently';
 }

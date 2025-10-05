@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/core/constant/app_color.dart';
 import 'package:islami_app/core/constant/app_const.dart';
 import 'package:islami_app/core/constant/app_style.dart';
+import 'package:islami_app/core/constant/images_path.dart';
 import 'package:islami_app/main_layer/main_layer.dart';
 import 'package:islami_app/widget/main_header_islami.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -148,27 +149,27 @@ class OnBoarding {
 
 List<OnBoarding> onBoardingScreens = [
   OnBoarding(
-    image: 'assets/images/onboarding/screen1.png',
+    image: PngPath.onBoardingScreenImg1,
     title: 'Welcome To Islmi App',
     subtitle: '',
   ),
   OnBoarding(
-    image: 'assets/images/onboarding/screen2.png',
+    image: PngPath.onBoardingScreenImg2,
     title: 'Welcome To Islami',
     subtitle: 'We Are Very Excited To Have You In Our Community',
   ),
   OnBoarding(
-    image: 'assets/images/onboarding/screen3.png',
+    image: PngPath.onBoardingScreenImg3,
     title: 'Reading the Quran',
     subtitle: 'Read, and your Lord is the Most Generous',
   ),
   OnBoarding(
-    image: 'assets/images/onboarding/screen4.png',
+    image: PngPath.onBoardingScreenImg4,
     title: 'Bearish',
     subtitle: 'Praise the name of your Lord, the Most High',
   ),
   OnBoarding(
-    image: 'assets/images/onboarding/screen5.png',
+    image: PngPath.onBoardingScreenImg5,
     title: 'Holy Quran Radio',
     subtitle:
         'You can listen to the Holy Quran Radio through the application for free and easily',

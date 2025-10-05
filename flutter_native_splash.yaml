@@ -1,9 +1,13 @@
 flutter_native_splash:
-  background_image: "assets/images/islami_logo.png"
-  branding: assets/images/branding_logo.png
+  background_image: "assets/images/splash2/splash_screen1.png"
+  branding_dark: assets/images/branding_logo.png
+  color: "#202020"
   branding_mode: bottom
   android_12:
-    color: "#1E1E1E"
-    image: assets/images/islami_logo.png
+    color: "#202020"
+    image: assets/images/splash2/splash_screen1.png
+    branding_dark: assets/images/branding_logo.png
     branding: assets/images/branding_logo.png
-
+    android: true
+    ios: true
+    web: false

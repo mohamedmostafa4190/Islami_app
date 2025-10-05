@@ -28,32 +28,47 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Spacer(),
-              Align(
-                alignment: AlignmentDirectional.center,
-                child: Image.asset(
-                  'assets/images/splash2/splash_screen2.png',
-                  width: 180,
-                  height: 165,
+        child: Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            Container(
+              child: Image.asset(
+                'assets/images/splash2/Splash Screen.png',
+                fit: BoxFit.cover,
+                width: double.infinity,
+              ),
+            ),
+            Column(
+              children: [
+                Spacer(),
+                Align(
+                  alignment: AlignmentDirectional.center,
+                  child: Image.asset(
+                    'assets/images/splash2/islami_logo.png',
+                    width: 180,
+                    height: 165,
+                  ),
                 ),
-              ),
-              Spacer(),
-              Image.asset(
-                'assets/images/splash2/route_branding.png',
-                width: 180,
-                height: 80,
-              ),
-              Text(
-                'Supervised by Mohamed Nabil',
-                style: AppStyle(color: AppColor.goldColor).labelSmall,
-              ),
-            ],
-          ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/splash2/route_logo.png',
+                        width: 180,
+                        height: 80,
+                      ),
+                      Text(
+                        'Supervised by Mohamed Nabil',
+                        style: AppStyle(color: AppColor.goldColor).labelSmall,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

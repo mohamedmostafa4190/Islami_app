@@ -40,7 +40,7 @@ class _QuranTabState extends State<QuranTab> {
                       sliver: SliverToBoxAdapter(
                         child: CustomSearch(
                           onChange: (value) {
-                            _filterSura(value);
+                            _filterSura(value.toLowerCase());
                           },
                         ),
                       ),
@@ -124,7 +124,7 @@ class _QuranTabState extends State<QuranTab> {
         if (QuranSura.englishQuranSuraList[i].toLowerCase().contains(value)) {
           searchResultList.add(i);
         }
-        if (QuranSura.arabicQuranSuraList[i].toLowerCase().contains(value)) {
+        if (QuranSura.arabicQuranSuraList[i].contains(value)) {
           searchResultList.add(i);
         }
       }
